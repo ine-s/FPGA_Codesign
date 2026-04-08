@@ -1,0 +1,52 @@
+# Quartus/FPGA build and temp files
+CUTECAR/db/
+CUTECAR/output_files/
+CUTECAR/greybox_tmp/
+CUTECAR/incremental_db/
+CUTECAR/simulation/
+CUTECAR/.qsys_edit/
+CUTECAR/Nios_CUTECAR/synthesis/
+CUTECAR/Nios_CUTECAR/
+
+# Backup and report files
+*.bak
+*.rpt
+*.smsg
+*.summary
+*.qws
+*.qdf
+*.pin
+*.jdi
+*.sof
+*.srec
+*.elf
+*.ncf
+*.sopcinfo
+*.html
+*.cmp
+*.bsf
+*.qip
+*.vho
+*.sdo
+*.xrf
+*.map
+*.sta
+*.fit
+*.flow
+*.asm
+
+# Ignore generated Qsys/Platform Designer files
+nios_system*
+nios_v5_system*
+Nios_CUTECAR*
+
+# Ignore all files except VHDL and main project files
+!capteurs_sol.vhd
+!capteurs_sol_seuil.vhd
+!PWM_generation.vhd
+!pll_2freqs.vhd
+!Top_CUTECAR.vhd
+!README.md
+!CUTECAR.qpf
+!CUTECAR.qsf
+!Code/
