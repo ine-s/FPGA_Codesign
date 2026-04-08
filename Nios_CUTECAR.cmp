@@ -1,0 +1,34 @@
+	component Nios_CUTECAR is
+		port (
+			clk_clk                               : in    std_logic                     := 'X';             -- clk
+			switches_export                       : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- export
+			leds_export                           : out   std_logic_vector(7 downto 0);                     -- export
+			sdram_wire_addr                       : out   std_logic_vector(12 downto 0);                    -- addr
+			sdram_wire_ba                         : out   std_logic_vector(1 downto 0);                     -- ba
+			sdram_wire_cas_n                      : out   std_logic;                                        -- cas_n
+			sdram_wire_cke                        : out   std_logic;                                        -- cke
+			sdram_wire_cs_n                       : out   std_logic;                                        -- cs_n
+			sdram_wire_dq                         : inout std_logic_vector(15 downto 0) := (others => 'X'); -- dq
+			sdram_wire_dqm                        : out   std_logic_vector(1 downto 0);                     -- dqm
+			sdram_wire_ras_n                      : out   std_logic;                                        -- ras_n
+			sdram_wire_we_n                       : out   std_logic;                                        -- we_n
+			reset_reset_n                         : in    std_logic                     := 'X';             -- reset_n
+			writedatal_external_connection_export : out   std_logic_vector(13 downto 0);                    -- export
+			writedatar_external_connection_export : out   std_logic_vector(13 downto 0);                    -- export
+			pos_data0r_external_connection_export : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- export
+			pos_data1r_external_connection_export : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- export
+			pos_data2r_external_connection_export : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- export
+			pos_data4r_external_connection_export : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- export
+			pos_data5r_external_connection_export : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- export
+			pos_data6r_external_connection_export : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- export
+			pos_data3r_external_connection_export : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- export
+			vect_pos_external_connection_export   : in    std_logic_vector(6 downto 0)  := (others => 'X'); -- export
+			niveau_external_connection_export     : out   std_logic_vector(7 downto 0);                     -- export
+			base_duty_external_connection_export  : out   std_logic_vector(13 downto 0);                    -- export
+			port_s_external_connection_export     : out   std_logic_vector(2 downto 0);                     -- export
+			port_e_external_connection_export     : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- export
+			pio_op_sel_external_connection_export : out   std_logic_vector(1 downto 0);                     -- export
+			pio_result_external_connection_export : in    std_logic_vector(8 downto 0)  := (others => 'X')  -- export
+		);
+	end component Nios_CUTECAR;
+

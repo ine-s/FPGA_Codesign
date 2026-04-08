@@ -1,0 +1,665 @@
+Analysis & Synthesis report for CUTECAR
+Wed Apr 08 16:25:56 2026
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++------------------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Wed Apr 08 16:25:56 2026                ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; CUTECAR                                          ;
+; Top-level Entity Name              ; Top_CUTECAR                                      ;
+; Family                             ; Cyclone IV E                                     ;
+; Total logic elements               ; N/A until Partition Merge                        ;
+;     Total combinational functions  ; N/A until Partition Merge                        ;
+;     Dedicated logic registers      ; N/A until Partition Merge                        ;
+; Total registers                    ; N/A until Partition Merge                        ;
+; Total pins                         ; N/A until Partition Merge                        ;
+; Total virtual pins                 ; N/A until Partition Merge                        ;
+; Total memory bits                  ; N/A until Partition Merge                        ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                        ;
+; Total PLLs                         ; N/A until Partition Merge                        ;
++------------------------------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                                      ; Top_CUTECAR        ; CUTECAR            ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-24        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Apr 08 16:25:04 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CUTECAR -c CUTECAR
+Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 16 of the 16 physical processors detected instead.
+Info (12248): Elaborating Qsys system entity "Nios_CUTECAR.qsys"
+Info (12250): 2026.04.08.16:25:15 Progress: Loading CUTECAR/Nios_CUTECAR.qsys
+Info (12250): 2026.04.08.16:25:15 Progress: Reading input file
+Info (12250): 2026.04.08.16:25:15 Progress: Adding clk_0 [clock_source 13.0]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module clk_0
+Info (12250): 2026.04.08.16:25:15 Progress: Adding nios2_qsys_0 [altera_nios2_qsys 13.0]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module nios2_qsys_0
+Info (12250): 2026.04.08.16:25:15 Progress: Adding onchip_memory [altera_avalon_onchip_memory2 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module onchip_memory
+Info (12250): 2026.04.08.16:25:15 Progress: Adding switches [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module switches
+Info (12250): 2026.04.08.16:25:15 Progress: Adding LEDs [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module LEDs
+Info (12250): 2026.04.08.16:25:15 Progress: Adding jtag_uart [altera_avalon_jtag_uart 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module jtag_uart
+Info (12250): 2026.04.08.16:25:15 Progress: Adding sdram [altera_avalon_new_sdram_controller 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module sdram
+Info (12250): 2026.04.08.16:25:15 Progress: Adding writedataR [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module writedataR
+Info (12250): 2026.04.08.16:25:15 Progress: Adding writedataL [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module writedataL
+Info (12250): 2026.04.08.16:25:15 Progress: Adding clocks [altera_up_clocks 13.0]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module clocks
+Info (12250): 2026.04.08.16:25:15 Progress: Adding pos_data0r [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module pos_data0r
+Info (12250): 2026.04.08.16:25:15 Progress: Adding pos_data1r [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module pos_data1r
+Info (12250): 2026.04.08.16:25:15 Progress: Adding pos_data2r [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module pos_data2r
+Info (12250): 2026.04.08.16:25:15 Progress: Adding pos_data4r [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module pos_data4r
+Info (12250): 2026.04.08.16:25:15 Progress: Adding pos_data5r [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module pos_data5r
+Info (12250): 2026.04.08.16:25:15 Progress: Adding pos_data6r [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module pos_data6r
+Info (12250): 2026.04.08.16:25:15 Progress: Adding pos_data3r [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module pos_data3r
+Info (12250): 2026.04.08.16:25:15 Progress: Adding vect_pos [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module vect_pos
+Info (12250): 2026.04.08.16:25:15 Progress: Adding niveau [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module niveau
+Info (12250): 2026.04.08.16:25:15 Progress: Adding port_s [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module port_s
+Info (12250): 2026.04.08.16:25:15 Progress: Adding base_duty [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module base_duty
+Info (12250): 2026.04.08.16:25:15 Progress: Adding port_e [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module port_e
+Info (12250): 2026.04.08.16:25:15 Progress: Adding pio_op_sel [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module pio_op_sel
+Info (12250): 2026.04.08.16:25:15 Progress: Adding pio_result [altera_avalon_pio 13.0.1.99.2]
+Info (12250): 2026.04.08.16:25:15 Progress: Parameterizing module pio_result
+Info (12250): 2026.04.08.16:25:15 Progress: Building connections
+Info (12250): 2026.04.08.16:25:16 Progress: Parameterizing connections
+Info (12250): 2026.04.08.16:25:16 Progress: Validating
+Info (12250): 2026.04.08.16:25:16 Progress: Done reading input file
+Info (12250): Nios_CUTECAR.switches: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): Nios_CUTECAR.pos_data0r: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): Nios_CUTECAR.pos_data1r: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): Nios_CUTECAR.pos_data2r: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): Nios_CUTECAR.pos_data4r: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): Nios_CUTECAR.pos_data5r: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): Nios_CUTECAR.pos_data6r: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): Nios_CUTECAR.pos_data3r: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): Nios_CUTECAR.vect_pos: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): Nios_CUTECAR.port_e: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): Nios_CUTECAR.pio_result: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info (12250): Nios_CUTECAR: Generating Nios_CUTECAR "Nios_CUTECAR" for QUARTUS_SYNTH
+Info (12250): Pipeline_bridge_swap_transform: After transform: 24 modules, 95 connections
+Info (12250): No custom instruction connections, skipping transform 
+Info (12250): Merlin_translator_transform: After transform: 48 modules, 191 connections
+Info (12250): Merlin_domain_transform: After transform: 96 modules, 518 connections
+Info (12250): Merlin_router_transform: After transform: 120 modules, 614 connections
+Info (12250): Merlin_burst_transform: After transform: 121 modules, 618 connections
+Info (12250): Reset_adaptation_transform: After transform: 123 modules, 481 connections
+Info (12250): Merlin_network_to_switch_transform: After transform: 170 modules, 579 connections
+Info (12250): Merlin_width_transform: After transform: 172 modules, 585 connections
+Info (12250): Merlin_mm_transform: After transform: 172 modules, 585 connections
+Info (12250): Merlin_interrupt_mapper_transform: After transform: 173 modules, 588 connections
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning (12251): Nios_CUTECAR: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Info (12250): Nios2_qsys_0: Starting RTL generation for module 'Nios_CUTECAR_nios2_qsys_0'
+Info (12250): Nios2_qsys_0:   Generation command is [exec C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=Nios_CUTECAR_nios2_qsys_0 --dir=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0001_nios2_qsys_0_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0001_nios2_qsys_0_gen//Nios_CUTECAR_nios2_qsys_0_processor_configuration.pl  --do_build_sim=0    --bogus  ]
+Info (12250): Nios2_qsys_0: # 2026.04.08 16:25:21 (*) Starting Nios II generation
+Info (12250): Nios2_qsys_0: # 2026.04.08 16:25:21 (*)   Checking for plaintext license.
+Info (12250): Nios2_qsys_0: # 2026.04.08 16:25:38 (*)   Plaintext license not found.
+Info (12250): Nios2_qsys_0: # 2026.04.08 16:25:38 (*)   No license required to generate encrypted Nios II/e.
+Info (12250): Nios2_qsys_0: # 2026.04.08 16:25:38 (*)   Elaborating CPU configuration settings
+Info (12250): Nios2_qsys_0: # 2026.04.08 16:25:38 (*)   Creating all objects for CPU
+Info (12250): Nios2_qsys_0: # 2026.04.08 16:25:39 (*)   Generating RTL from CPU objects
+Info (12250): Nios2_qsys_0: # 2026.04.08 16:25:39 (*)   Creating plain-text RTL
+Info (12250): Nios2_qsys_0: # 2026.04.08 16:25:40 (*) Done Nios II generation
+Info (12250): Nios2_qsys_0: Done RTL generation for module 'Nios_CUTECAR_nios2_qsys_0'
+Info (12250): Nios2_qsys_0: "Nios_CUTECAR" instantiated altera_nios2_qsys "nios2_qsys_0"
+Info (12250): Onchip_memory: Starting RTL generation for module 'Nios_CUTECAR_onchip_memory'
+Info (12250): Onchip_memory:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Nios_CUTECAR_onchip_memory --dir=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0002_onchip_memory_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0002_onchip_memory_gen//Nios_CUTECAR_onchip_memory_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Onchip_memory: Done RTL generation for module 'Nios_CUTECAR_onchip_memory'
+Info (12250): Onchip_memory: "Nios_CUTECAR" instantiated altera_avalon_onchip_memory2 "onchip_memory"
+Info (12250): Switches: Starting RTL generation for module 'Nios_CUTECAR_switches'
+Info (12250): Switches:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Nios_CUTECAR_switches --dir=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0003_switches_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0003_switches_gen//Nios_CUTECAR_switches_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Switches: Done RTL generation for module 'Nios_CUTECAR_switches'
+Info (12250): Switches: "Nios_CUTECAR" instantiated altera_avalon_pio "switches"
+Info (12250): LEDs: Starting RTL generation for module 'Nios_CUTECAR_LEDs'
+Info (12250): LEDs:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Nios_CUTECAR_LEDs --dir=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0004_LEDs_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0004_LEDs_gen//Nios_CUTECAR_LEDs_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): LEDs: Done RTL generation for module 'Nios_CUTECAR_LEDs'
+Info (12250): LEDs: "Nios_CUTECAR" instantiated altera_avalon_pio "LEDs"
+Info (12250): Jtag_uart: Starting RTL generation for module 'Nios_CUTECAR_jtag_uart'
+Info (12250): Jtag_uart:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=Nios_CUTECAR_jtag_uart --dir=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0005_jtag_uart_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0005_jtag_uart_gen//Nios_CUTECAR_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Jtag_uart: Done RTL generation for module 'Nios_CUTECAR_jtag_uart'
+Info (12250): Jtag_uart: "Nios_CUTECAR" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info (12250): Sdram: Starting RTL generation for module 'Nios_CUTECAR_sdram'
+Info (12250): Sdram:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=Nios_CUTECAR_sdram --dir=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0006_sdram_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0006_sdram_gen//Nios_CUTECAR_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Sdram: Done RTL generation for module 'Nios_CUTECAR_sdram'
+Info (12250): Sdram: "Nios_CUTECAR" instantiated altera_avalon_new_sdram_controller "sdram"
+Info (12250): WritedataR: Starting RTL generation for module 'Nios_CUTECAR_writedataR'
+Info (12250): WritedataR:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Nios_CUTECAR_writedataR --dir=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0007_writedataR_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0007_writedataR_gen//Nios_CUTECAR_writedataR_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): WritedataR: Done RTL generation for module 'Nios_CUTECAR_writedataR'
+Info (12250): WritedataR: "Nios_CUTECAR" instantiated altera_avalon_pio "writedataR"
+Info (12250): Clocks: Starting Generation of Required Clocks for DE-Series Boards
+Info (12250): Clocks: "Nios_CUTECAR" instantiated altera_up_clocks "clocks"
+Info (12250): Vect_pos: Starting RTL generation for module 'Nios_CUTECAR_vect_pos'
+Info (12250): Vect_pos:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Nios_CUTECAR_vect_pos --dir=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0009_vect_pos_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0009_vect_pos_gen//Nios_CUTECAR_vect_pos_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Vect_pos: Done RTL generation for module 'Nios_CUTECAR_vect_pos'
+Info (12250): Vect_pos: "Nios_CUTECAR" instantiated altera_avalon_pio "vect_pos"
+Info (12250): Port_s: Starting RTL generation for module 'Nios_CUTECAR_port_s'
+Info (12250): Port_s:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Nios_CUTECAR_port_s --dir=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0010_port_s_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0010_port_s_gen//Nios_CUTECAR_port_s_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Port_s: Done RTL generation for module 'Nios_CUTECAR_port_s'
+Info (12250): Port_s: "Nios_CUTECAR" instantiated altera_avalon_pio "port_s"
+Info (12250): Port_e: Starting RTL generation for module 'Nios_CUTECAR_port_e'
+Info (12250): Port_e:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Nios_CUTECAR_port_e --dir=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0011_port_e_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0011_port_e_gen//Nios_CUTECAR_port_e_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Port_e: Done RTL generation for module 'Nios_CUTECAR_port_e'
+Info (12250): Port_e: "Nios_CUTECAR" instantiated altera_avalon_pio "port_e"
+Info (12250): Pio_op_sel: Starting RTL generation for module 'Nios_CUTECAR_pio_op_sel'
+Info (12250): Pio_op_sel:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Nios_CUTECAR_pio_op_sel --dir=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0012_pio_op_sel_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0012_pio_op_sel_gen//Nios_CUTECAR_pio_op_sel_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Pio_op_sel: Done RTL generation for module 'Nios_CUTECAR_pio_op_sel'
+Info (12250): Pio_op_sel: "Nios_CUTECAR" instantiated altera_avalon_pio "pio_op_sel"
+Info (12250): Pio_result: Starting RTL generation for module 'Nios_CUTECAR_pio_result'
+Info (12250): Pio_result:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Nios_CUTECAR_pio_result --dir=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0013_pio_result_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/yknis/AppData/Local/Temp/alt0551_5166289684378066183.dir/0013_pio_result_gen//Nios_CUTECAR_pio_result_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Pio_result: Done RTL generation for module 'Nios_CUTECAR_pio_result'
+Info (12250): Pio_result: "Nios_CUTECAR" instantiated altera_avalon_pio "pio_result"
+Info (12250): Nios2_qsys_0_instruction_master_translator: "Nios_CUTECAR" instantiated altera_merlin_master_translator "nios2_qsys_0_instruction_master_translator"
+Info (12250): Nios2_qsys_0_jtag_debug_module_translator: "Nios_CUTECAR" instantiated altera_merlin_slave_translator "nios2_qsys_0_jtag_debug_module_translator"
+Info (12250): Nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent: "Nios_CUTECAR" instantiated altera_merlin_master_agent "nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent"
+Info (12250): Nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent: "Nios_CUTECAR" instantiated altera_merlin_slave_agent "nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+Info (12250): Nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: "Nios_CUTECAR" instantiated altera_avalon_sc_fifo "nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info (12250): Addr_router: "Nios_CUTECAR" instantiated altera_merlin_router "addr_router"
+Info (12250): Addr_router_001: "Nios_CUTECAR" instantiated altera_merlin_router "addr_router_001"
+Info (12250): Id_router: "Nios_CUTECAR" instantiated altera_merlin_router "id_router"
+Info (12250): Id_router_002: "Nios_CUTECAR" instantiated altera_merlin_router "id_router_002"
+Info (12250): Id_router_003: "Nios_CUTECAR" instantiated altera_merlin_router "id_router_003"
+Info (12250): Burst_adapter: "Nios_CUTECAR" instantiated altera_merlin_burst_adapter "burst_adapter"
+Info (12250): Rst_controller: "Nios_CUTECAR" instantiated altera_reset_controller "rst_controller"
+Info (12250): Cmd_xbar_demux: "Nios_CUTECAR" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info (12250): Cmd_xbar_demux_001: "Nios_CUTECAR" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info (12250): Cmd_xbar_mux: "Nios_CUTECAR" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info (12250): Rsp_xbar_demux: "Nios_CUTECAR" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info (12250): Rsp_xbar_demux_003: "Nios_CUTECAR" instantiated altera_merlin_demultiplexer "rsp_xbar_demux_003"
+Info (12250): Rsp_xbar_mux: "Nios_CUTECAR" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info (12250): Reusing file P:/Documents/codesign_fpga/CUTECAR/db/ip/Nios_CUTECAR/submodules/altera_merlin_arbitrator.sv
+Info (12250): Rsp_xbar_mux_001: "Nios_CUTECAR" instantiated altera_merlin_multiplexer "rsp_xbar_mux_001"
+Info (12250): Reusing file P:/Documents/codesign_fpga/CUTECAR/db/ip/Nios_CUTECAR/submodules/altera_merlin_arbitrator.sv
+Info (12250): Width_adapter: "Nios_CUTECAR" instantiated altera_merlin_width_adapter "width_adapter"
+Info (12250): Reusing file P:/Documents/codesign_fpga/CUTECAR/db/ip/Nios_CUTECAR/submodules/altera_merlin_address_alignment.sv
+Info (12250): Reusing file P:/Documents/codesign_fpga/CUTECAR/db/ip/Nios_CUTECAR/submodules/altera_merlin_burst_uncompressor.sv
+Info (12250): Irq_mapper: "Nios_CUTECAR" instantiated altera_irq_mapper "irq_mapper"
+Info (12250): Nios_CUTECAR: Done Nios_CUTECAR" with 35 modules, 196 files, 3921158 bytes
+Info (12249): Finished elaborating Qsys system entity "Nios_CUTECAR.qsys"
+Info (12021): Found 2 design units, including 1 entities, in source file calculateur_cable.vhd
+    Info (12022): Found design unit 1: calculateur_cable-rtl
+    Info (12023): Found entity 1: calculateur_cable
+Info (12021): Found 2 design units, including 1 entities, in source file capteurs_sol.vhd
+    Info (12022): Found design unit 1: capteurs_sol-RTL
+    Info (12023): Found entity 1: capteurs_sol
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/codesign_fpga/ip_modules/pll_2freqs.vhd
+    Info (12022): Found design unit 1: pll_2freqs-SYN
+    Info (12023): Found entity 1: pll_2freqs
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/codesign_fpga/ip_modules/capteurs_sol_seuil.vhd
+    Info (12022): Found design unit 1: capteurs_sol_seuil-RTL
+    Info (12023): Found entity 1: capteurs_sol_seuil
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/codesign_fpga/ip_modules/pwm_generation.vhd
+    Info (12022): Found design unit 1: PWM_generation-arch
+    Info (12023): Found entity 1: PWM_generation
+Info (12021): Found 2 design units, including 1 entities, in source file top_cutecar.vhd
+    Info (12022): Found design unit 1: Top_CUTECAR-Structure
+    Info (12023): Found entity 1: Top_CUTECAR
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/codesign_fpga/ip_modules/ctl_sl.vhd
+    Info (12022): Found design unit 1: CTL_SL-rtl
+    Info (12023): Found entity 1: CTL_SL
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/codesign_fpga/ip_modules/ctl_rot.vhd
+    Info (12022): Found design unit 1: CTL_Rot-rtl
+    Info (12023): Found entity 1: CTL_Rot
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/nios_cutecar.v
+    Info (12023): Found entity 1: Nios_CUTECAR
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_leds.v
+    Info (12023): Found entity 1: Nios_CUTECAR_LEDs
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_addr_router.sv
+    Info (12023): Found entity 1: Nios_CUTECAR_addr_router_default_decode
+    Info (12023): Found entity 2: Nios_CUTECAR_addr_router
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_addr_router_001.sv
+    Info (12023): Found entity 1: Nios_CUTECAR_addr_router_001_default_decode
+    Info (12023): Found entity 2: Nios_CUTECAR_addr_router_001
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_clocks.v
+    Info (12023): Found entity 1: Nios_CUTECAR_clocks
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_cmd_xbar_demux.sv
+    Info (12023): Found entity 1: Nios_CUTECAR_cmd_xbar_demux
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_cmd_xbar_demux_001.sv
+    Info (12023): Found entity 1: Nios_CUTECAR_cmd_xbar_demux_001
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_cmd_xbar_mux.sv
+    Info (12023): Found entity 1: Nios_CUTECAR_cmd_xbar_mux
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_id_router.sv
+    Info (12023): Found entity 1: Nios_CUTECAR_id_router_default_decode
+    Info (12023): Found entity 2: Nios_CUTECAR_id_router
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_id_router_002.sv
+    Info (12023): Found entity 1: Nios_CUTECAR_id_router_002_default_decode
+    Info (12023): Found entity 2: Nios_CUTECAR_id_router_002
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_id_router_003.sv
+    Info (12023): Found entity 1: Nios_CUTECAR_id_router_003_default_decode
+    Info (12023): Found entity 2: Nios_CUTECAR_id_router_003
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_irq_mapper.sv
+    Info (12023): Found entity 1: Nios_CUTECAR_irq_mapper
+Info (12021): Found 5 design units, including 5 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_jtag_uart.v
+    Info (12023): Found entity 1: Nios_CUTECAR_jtag_uart_sim_scfifo_w
+    Info (12023): Found entity 2: Nios_CUTECAR_jtag_uart_scfifo_w
+    Info (12023): Found entity 3: Nios_CUTECAR_jtag_uart_sim_scfifo_r
+    Info (12023): Found entity 4: Nios_CUTECAR_jtag_uart_scfifo_r
+    Info (12023): Found entity 5: Nios_CUTECAR_jtag_uart
+Info (12021): Found 21 design units, including 21 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_nios2_qsys_0.v
+    Info (12023): Found entity 1: Nios_CUTECAR_nios2_qsys_0_register_bank_a_module
+    Info (12023): Found entity 2: Nios_CUTECAR_nios2_qsys_0_register_bank_b_module
+    Info (12023): Found entity 3: Nios_CUTECAR_nios2_qsys_0_nios2_oci_debug
+    Info (12023): Found entity 4: Nios_CUTECAR_nios2_qsys_0_ociram_sp_ram_module
+    Info (12023): Found entity 5: Nios_CUTECAR_nios2_qsys_0_nios2_ocimem
+    Info (12023): Found entity 6: Nios_CUTECAR_nios2_qsys_0_nios2_avalon_reg
+    Info (12023): Found entity 7: Nios_CUTECAR_nios2_qsys_0_nios2_oci_break
+    Info (12023): Found entity 8: Nios_CUTECAR_nios2_qsys_0_nios2_oci_xbrk
+    Info (12023): Found entity 9: Nios_CUTECAR_nios2_qsys_0_nios2_oci_dbrk
+    Info (12023): Found entity 10: Nios_CUTECAR_nios2_qsys_0_nios2_oci_itrace
+    Info (12023): Found entity 11: Nios_CUTECAR_nios2_qsys_0_nios2_oci_td_mode
+    Info (12023): Found entity 12: Nios_CUTECAR_nios2_qsys_0_nios2_oci_dtrace
+    Info (12023): Found entity 13: Nios_CUTECAR_nios2_qsys_0_nios2_oci_compute_tm_count
+    Info (12023): Found entity 14: Nios_CUTECAR_nios2_qsys_0_nios2_oci_fifowp_inc
+    Info (12023): Found entity 15: Nios_CUTECAR_nios2_qsys_0_nios2_oci_fifocount_inc
+    Info (12023): Found entity 16: Nios_CUTECAR_nios2_qsys_0_nios2_oci_fifo
+    Info (12023): Found entity 17: Nios_CUTECAR_nios2_qsys_0_nios2_oci_pib
+    Info (12023): Found entity 18: Nios_CUTECAR_nios2_qsys_0_nios2_oci_im
+    Info (12023): Found entity 19: Nios_CUTECAR_nios2_qsys_0_nios2_performance_monitors
+    Info (12023): Found entity 20: Nios_CUTECAR_nios2_qsys_0_nios2_oci
+    Info (12023): Found entity 21: Nios_CUTECAR_nios2_qsys_0
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_nios2_qsys_0_jtag_debug_module_sysclk.v
+    Info (12023): Found entity 1: Nios_CUTECAR_nios2_qsys_0_jtag_debug_module_sysclk
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_nios2_qsys_0_jtag_debug_module_tck.v
+    Info (12023): Found entity 1: Nios_CUTECAR_nios2_qsys_0_jtag_debug_module_tck
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_nios2_qsys_0_jtag_debug_module_wrapper.v
+    Info (12023): Found entity 1: Nios_CUTECAR_nios2_qsys_0_jtag_debug_module_wrapper
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_nios2_qsys_0_oci_test_bench.v
+    Info (12023): Found entity 1: Nios_CUTECAR_nios2_qsys_0_oci_test_bench
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_nios2_qsys_0_test_bench.v
+    Info (12023): Found entity 1: Nios_CUTECAR_nios2_qsys_0_test_bench
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_onchip_memory.v
+    Info (12023): Found entity 1: Nios_CUTECAR_onchip_memory
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_pio_op_sel.v
+    Info (12023): Found entity 1: Nios_CUTECAR_pio_op_sel
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_pio_result.v
+    Info (12023): Found entity 1: Nios_CUTECAR_pio_result
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_port_e.v
+    Info (12023): Found entity 1: Nios_CUTECAR_port_e
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_port_s.v
+    Info (12023): Found entity 1: Nios_CUTECAR_port_s
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_rsp_xbar_demux.sv
+    Info (12023): Found entity 1: Nios_CUTECAR_rsp_xbar_demux
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_rsp_xbar_demux_003.sv
+    Info (12023): Found entity 1: Nios_CUTECAR_rsp_xbar_demux_003
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_rsp_xbar_mux.sv
+    Info (12023): Found entity 1: Nios_CUTECAR_rsp_xbar_mux
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_rsp_xbar_mux_001.sv
+    Info (12023): Found entity 1: Nios_CUTECAR_rsp_xbar_mux_001
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_sdram.v
+    Info (12023): Found entity 1: Nios_CUTECAR_sdram_input_efifo_module
+    Info (12023): Found entity 2: Nios_CUTECAR_sdram
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_switches.v
+    Info (12023): Found entity 1: Nios_CUTECAR_switches
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_vect_pos.v
+    Info (12023): Found entity 1: Nios_CUTECAR_vect_pos
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/nios_cutecar_writedatar.v
+    Info (12023): Found entity 1: Nios_CUTECAR_writedataR
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/altera_merlin_address_alignment.sv
+    Info (12023): Found entity 1: altera_merlin_address_alignment
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/nios_cutecar/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator
+    Info (12023): Found entity 2: altera_merlin_arb_adder
+Info (12021): Found 7 design units, including 7 entities, in source file db/ip/nios_cutecar/submodules/altera_merlin_burst_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_burstwrap_increment
+    Info (12023): Found entity 2: altera_merlin_burst_adapter_adder
+    Info (12023): Found entity 3: altera_merlin_burst_adapter_subtractor
+    Info (12023): Found entity 4: altera_merlin_burst_adapter_min
+    Info (12023): Found entity 5: altera_merlin_burst_adapter
+    Info (12023): Found entity 6: altera_merlin_burst_adapter_uncompressed_only
+    Info (12023): Found entity 7: altera_merlin_burst_adapter_full
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/altera_merlin_slave_agent.sv
+    Info (12023): Found entity 1: altera_merlin_slave_agent
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/altera_merlin_width_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_width_adapter
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/nios_cutecar/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer
+Error (10482): VHDL error at Top_CUTECAR.vhd(156): object "pll_2freqs" is used but not declared File: P:/Documents/codesign_fpga/CUTECAR/Top_CUTECAR.vhd Line: 156
+Info (144001): Generated suppressed messages file P:/Documents/codesign_fpga/CUTECAR/output_files/CUTECAR.map.smsg
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 1 error, 168 warnings
+    Error: Peak virtual memory: 430 megabytes
+    Error: Processing ended: Wed Apr 08 16:25:57 2026
+    Error: Elapsed time: 00:00:53
+    Error: Total CPU time (on all processors): 00:00:13
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in P:/Documents/codesign_fpga/CUTECAR/output_files/CUTECAR.map.smsg.
+
+
